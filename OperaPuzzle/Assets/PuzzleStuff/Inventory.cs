@@ -11,7 +11,7 @@ public class Inventory : MonoBehaviour {
 
     public List<PuzzlePiece> Items = new List<PuzzlePiece>();
 
-    //public UnityEvent CurrentItemChanged = new UnityEvent();
+    public UnityEvent CurrentItemChanged = new UnityEvent();
     public UnityEvent InventoryItemChanged = new UnityEvent();
 
     // Use this for initialization
@@ -47,18 +47,12 @@ public class Inventory : MonoBehaviour {
 
     public void ChangeSelected(PuzzlePiece piece, bool invokeEvent)
     {
-        if (CurrentPuzzlePiece != null)
-        {
-            Items.Add(CurrentPuzzlePiece);
-        }
         CurrentPuzzlePiece = piece;
-        Items.Remove(piece);
 
         if (invokeEvent)
         {
 
-            //CurrentItemChanged.Invoke();
-            InventoryItemChanged.Invoke();
+            CurrentItemChanged.Invoke();
         }
     }
 
@@ -66,7 +60,10 @@ public class Inventory : MonoBehaviour {
     {
         PuzzlePiece piece = CurrentPuzzlePiece;
         CurrentPuzzlePiece = null;
-        //CurrentItemChanged.Invoke();
+
+        Items.Remove(piece);
+
+        CurrentItemChanged.Invoke();
         InventoryItemChanged.Invoke();
         return piece;
     }
@@ -86,5 +83,13 @@ public class Inventory : MonoBehaviour {
     public void RemoveObject(PuzzlePiece obj)
     {
          Items.Remove(obj);
+        if (CurrentPuzzlePiece == obj)
+        {
+            CurrentPuzzlePiece = null;
+        }
+
+        InventoryItemChanged.Invoke();
+        CurrentItemChanged.Invoke();
+
     }
 }

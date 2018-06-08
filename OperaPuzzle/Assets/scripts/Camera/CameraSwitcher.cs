@@ -11,6 +11,7 @@ public class CameraSwitcher : MonoBehaviour
     public void SwitchCameras(Transform switchTo)
     {
         Camera.main.transform.position = switchTo.position;
+        Camera.main.transform.rotation = switchTo.rotation;
         Evt_OnSwitchToObjectView.Invoke();
     }
 }

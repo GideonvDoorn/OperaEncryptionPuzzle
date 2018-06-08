@@ -26,8 +26,7 @@ public class SelectionManager : MonoBehaviour {
     void Update () {
         if (Input.GetMouseButtonDown(0))
         {
-
-            if (!EventSystem.current.IsPointerOverGameObject() || true)
+            if (!EventSystem.current.IsPointerOverGameObject())
             {
                 RaycastHit hit;
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);

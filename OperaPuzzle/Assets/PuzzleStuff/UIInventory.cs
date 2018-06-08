@@ -21,7 +21,7 @@ public class UIInventory : MonoBehaviour {
             ItemButtons = GetComponentsInChildren<UIItemButton>();
 
             //Inventory.CurrentItemChanged.AddListener(RebuildInventoryButtons);
-            //Inventory.CurrentItemChanged.AddListener(ChangeCurrentItem);
+            Inventory.CurrentItemChanged.AddListener(ChangeCurrentItem);
             if (ItemButtons.Length > 0)
             {
                 Inventory.InventoryItemChanged.AddListener(RebuildInventoryButtons);

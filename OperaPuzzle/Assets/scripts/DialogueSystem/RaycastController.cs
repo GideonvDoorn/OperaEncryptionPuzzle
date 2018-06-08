@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.EventSystems;
 
 public class RaycastController : MonoBehaviour
 {
@@ -35,43 +36,45 @@ public class RaycastController : MonoBehaviour
 
         }
         else {
+            
             if (Input.GetMouseButtonDown(0))
-            {
-                RaycastHit hit;
-                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-                if (Physics.Raycast(ray, out hit))
+             {
+                if (!EventSystem.current.IsPointerOverGameObject())
                 {
-                    Transform objectHit = hit.transform;
+                    RaycastHit hit;
+                    Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+                    if (Physics.Raycast(ray, out hit))
+                    {
+                        Transform objectHit = hit.transform;
 
 
-                    if (hit.collider.GetComponent<CameraPosition>() != null)
-                    {
-                        StartCoroutine(MoveToPosition(hit.collider.GetComponent<CameraPosition>(), 2));
-                        //Camera.main.transform.position = hit.collider.GetComponent<CameraPosition>().transform.position;
-                        //Camera.main.transform.rotation = hit.collider.GetComponent<CameraPosition>().transform.rotation;
+                        if (hit.collider.GetComponent<CameraPosition>() != null)
+                        {
+                            StartCoroutine(MoveToPosition(hit.collider.GetComponent<CameraPosition>(), 2));
+                            //Camera.main.transform.position = hit.collider.GetComponent<CameraPosition>().transform.position;
+                            //Camera.main.transform.rotation = hit.collider.GetComponent<CameraPosition>().transform.rotation;
 
 
-                    }
-                    else if (hit.collider.GetComponent<ObjectViewPosition>() != null)
-                    {
-                        Camera.main.transform.position = hit.collider.GetComponent<ObjectViewPosition>().transform.position;
-                        Camera.main.transform.rotation = hit.collider.GetComponent<ObjectViewPosition>().transform.rotation;
-                        Evt_OnSwitchToObjectView.Invoke();
-                        cameraInputScript.AllowRotation = false;
-                    }
-                    else if (hit.collider.GetComponent<Interactable>() != null)
-                    {
-                        hit.collider.GetComponent<Interactable>().Evt_OnInteract.Invoke();
-                    }
-                    else if (hit.collider.GetComponent<RoomSwitcher>() != null)
-                    {
-                        hit.collider.GetComponent<RoomSwitcher>().SwitchRooms(); ;
+                        }
+                        else if (hit.collider.GetComponent<ObjectViewPosition>() != null)
+                        {
+                            Camera.main.transform.position = hit.collider.GetComponent<ObjectViewPosition>().transform.position;
+                            Camera.main.transform.rotation = hit.collider.GetComponent<ObjectViewPosition>().transform.rotation;
+                            Evt_OnSwitchToObjectView.Invoke();
+                            cameraInputScript.AllowRotation = false;
+                        }
+                        else if (hit.collider.GetComponent<Interactable>() != null)
+                        {
+                            hit.collider.GetComponent<Interactable>().Evt_OnInteract.Invoke();
+                        }
+                        else if (hit.collider.GetComponent<RoomSwitcher>() != null)
+                        {
+                            hit.collider.GetComponent<RoomSwitcher>().SwitchRooms(); ;
+                        }
                     }
                 }
             }
-
-
         }
 
        
