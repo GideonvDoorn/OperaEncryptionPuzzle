@@ -3,18 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+[RequireComponent(typeof(Puzzle))]
 public class CycledPuzzle : MonoBehaviour {
 
     public CycleSolutionPair[] Solution;
 
-    public int PuzzleID;
+    public int PuzzleID; //
 
-    public Inventory Inventory;
-    private bool rewarded = false;
+    public Inventory Inventory; //
+    private bool rewarded = false; //
 
     public UnityEvent SolvedEvent = new UnityEvent();
 
-    public PuzzlePiece[] Reward;
+    public PuzzlePiece[] Reward; //
+
+    private Puzzle basePuzzle;
+
+    public void Awake()
+    {
+        basePuzzle = GetComponent<Puzzle>();
+    }
 
     // Use this for initialization
     public void Start () {
@@ -50,7 +58,7 @@ public class CycledPuzzle : MonoBehaviour {
         //return correct;
     }
 
-    private void DispenseReward()
+    private void DispenseReward() //
     {
         if (!rewarded)
         {

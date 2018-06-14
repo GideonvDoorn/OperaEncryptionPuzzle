@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+[RequireComponent(typeof(PuzzleEvents))]
 public class Puzzle : MonoBehaviour {
 
     public int PuzzleID;
@@ -51,7 +52,7 @@ public class Puzzle : MonoBehaviour {
         {
             if (CheckSolution())
             {
-                Debug.Log("Correct!");
+                DispenseReward();
             }
             else
             {
@@ -89,11 +90,6 @@ public class Puzzle : MonoBehaviour {
                     correct = false;
                 }
             }
-        }
-
-        if (correct)
-        {
-            DispenseReward();
         }
 
         return correct;

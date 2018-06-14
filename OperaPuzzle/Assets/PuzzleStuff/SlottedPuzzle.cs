@@ -3,19 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+[RequireComponent(typeof(Puzzle))]
 public class SlottedPuzzle : MonoBehaviour
 {
 
     public PuzzleSolutionPair[] Solution;
 
-    public int PuzzleID;
+    public int PuzzleID; //
 
-    public Inventory Inventory;
-    public bool Rewarded = false;
+    public Inventory Inventory; //
+    public bool Rewarded = false; //
 
     public UnityEvent SolvedEvent = new UnityEvent();
 
-    public PuzzlePiece[] Reward;
+    public PuzzlePiece[] Reward; //
+
+    private Puzzle basePuzzle;
+
+    public void Awake()
+    {
+        basePuzzle = GetComponent<Puzzle>();
+    }
 
     // Use this for initialization
     public void Start () {
