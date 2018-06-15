@@ -2,14 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(PuzzleEvents))]
 public class Container : MonoBehaviour {
 
     public PuzzlePiece piece;
 
     public bool RemoveAfterPickup = true;
 
-	// Use this for initialization
-	void Start () {
+    public PuzzleEvents EventContainer;
+
+    public void Awake()
+    {
+        EventContainer = GetComponent<PuzzleEvents>();
+    }
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -27,6 +35,9 @@ public class Container : MonoBehaviour {
         }
 
         piece = null;
+
+        EventContainer.TakePiece.Invoke(p);
+
         return p;
     }
 }

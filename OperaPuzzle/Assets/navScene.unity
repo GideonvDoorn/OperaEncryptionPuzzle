@@ -290,20 +290,15 @@ Transform:
   m_Children:
   - {fileID: 1008233259}
   - {fileID: 438081563}
-  - {fileID: 974229798}
   - {fileID: 1782986742}
   - {fileID: 100113408}
   - {fileID: 225040034}
-  - {fileID: 2097144729}
   - {fileID: 355632879}
-  - {fileID: 855725788}
   - {fileID: 580125692}
   - {fileID: 748843194}
   - {fileID: 738111222}
-  - {fileID: 1861811441}
   - {fileID: 1227251224}
   - {fileID: 922926921}
-  - {fileID: 1795816160}
   m_Father: {fileID: 377664929}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1014,7 +1009,7 @@ Transform:
   - {fileID: 163669325}
   - {fileID: 160478543}
   m_Father: {fileID: 20201888}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &100113409
 BoxCollider:
@@ -1571,7 +1566,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5946ff0d55401bb4abbd653e99e8d42b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PuzzleID: 0
+  PuzzleID: {fileID: 0}
   Name: Cypher 4
 --- !u!1 &154527856
 GameObject:
@@ -2750,7 +2745,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5946ff0d55401bb4abbd653e99e8d42b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PuzzleID: 0
+  PuzzleID: {fileID: 0}
   Name: Cypher 3
 --- !u!1 &218405238
 GameObject:
@@ -2987,7 +2982,7 @@ Transform:
   - {fileID: 1406800919}
   - {fileID: 1762061674}
   m_Father: {fileID: 20201888}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &225040035
 BoxCollider:
@@ -3019,7 +3014,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &227504323
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4262,6 +4257,83 @@ Transform:
   m_Father: {fileID: 1242836233}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &333175996
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 907949346}
+    m_Modifications:
+    - target: {fileID: 114868854102622020, guid: c12440300e229d94f93d1622d780d9bd,
+        type: 2}
+      propertyPath: Solution.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4288470841939446, guid: c12440300e229d94f93d1622d780d9bd, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 12.483
+      objectReference: {fileID: 0}
+    - target: {fileID: 4288470841939446, guid: c12440300e229d94f93d1622d780d9bd, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 4.039
+      objectReference: {fileID: 0}
+    - target: {fileID: 4288470841939446, guid: c12440300e229d94f93d1622d780d9bd, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 7.637
+      objectReference: {fileID: 0}
+    - target: {fileID: 4288470841939446, guid: c12440300e229d94f93d1622d780d9bd, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4288470841939446, guid: c12440300e229d94f93d1622d780d9bd, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0.9848172
+      objectReference: {fileID: 0}
+    - target: {fileID: 4288470841939446, guid: c12440300e229d94f93d1622d780d9bd, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4288470841939446, guid: c12440300e229d94f93d1622d780d9bd, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.17359444
+      objectReference: {fileID: 0}
+    - target: {fileID: 4288470841939446, guid: c12440300e229d94f93d1622d780d9bd, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114435169010274446, guid: c12440300e229d94f93d1622d780d9bd,
+        type: 2}
+      propertyPath: Inventory
+      value: 
+      objectReference: {fileID: 833328810}
+    - target: {fileID: 114868854102622020, guid: c12440300e229d94f93d1622d780d9bd,
+        type: 2}
+      propertyPath: OrderedPuzzle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114868854102622020, guid: c12440300e229d94f93d1622d780d9bd,
+        type: 2}
+      propertyPath: Solution.Array.data[0]
+      value: 
+      objectReference: {fileID: 1726591356}
+    - target: {fileID: 114868854102622020, guid: c12440300e229d94f93d1622d780d9bd,
+        type: 2}
+      propertyPath: Solution.Array.data[2]
+      value: 
+      objectReference: {fileID: 922690303}
+    - target: {fileID: 114868854102622020, guid: c12440300e229d94f93d1622d780d9bd,
+        type: 2}
+      propertyPath: Solution.Array.data[1]
+      value: 
+      objectReference: {fileID: 1540058392}
+    - target: {fileID: 114435169010274446, guid: c12440300e229d94f93d1622d780d9bd,
+        type: 2}
+      propertyPath: Reward.Array.data[0]
+      value: 
+      objectReference: {fileID: 153426360}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: c12440300e229d94f93d1622d780d9bd, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &337125206
 GameObject:
   m_ObjectHideFlags: 0
@@ -4506,7 +4578,7 @@ Transform:
   - {fileID: 1386005934}
   - {fileID: 1709190847}
   m_Father: {fileID: 20201888}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &355632880
 BoxCollider:
@@ -4564,7 +4636,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5946ff0d55401bb4abbd653e99e8d42b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PuzzleID: 0
+  PuzzleID: {fileID: 0}
   Name: 
 --- !u!23 &357331494
 MeshRenderer:
@@ -4903,7 +4975,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5946ff0d55401bb4abbd653e99e8d42b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PuzzleID: 0
+  PuzzleID: {fileID: 0}
   Name: Cypher 1
 --- !u!1 &400660940
 GameObject:
@@ -5032,7 +5104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5946ff0d55401bb4abbd653e99e8d42b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PuzzleID: 0
+  PuzzleID: {fileID: 0}
   Name: Green Book 1
 --- !u!23 &404195637
 MeshRenderer:
@@ -6661,7 +6733,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5946ff0d55401bb4abbd653e99e8d42b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PuzzleID: 0
+  PuzzleID: {fileID: 0}
   Name: 
 --- !u!23 &521356836
 MeshRenderer:
@@ -6927,7 +6999,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5946ff0d55401bb4abbd653e99e8d42b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PuzzleID: 0
+  PuzzleID: {fileID: 0}
   Name: 
 --- !u!23 &533372485
 MeshRenderer:
@@ -7523,7 +7595,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5946ff0d55401bb4abbd653e99e8d42b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PuzzleID: 0
+  PuzzleID: {fileID: 0}
   Name: 
 --- !u!23 &556453146
 MeshRenderer:
@@ -8077,7 +8149,7 @@ Transform:
   - {fileID: 155616939}
   - {fileID: 1236851123}
   m_Father: {fileID: 20201888}
-  m_RootOrder: 9
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &580125693
 BoxCollider:
@@ -8433,7 +8505,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5946ff0d55401bb4abbd653e99e8d42b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PuzzleID: 0
+  PuzzleID: {fileID: 0}
   Name: Green Book 2
 --- !u!23 &629471939
 MeshRenderer:
@@ -9302,7 +9374,7 @@ Transform:
   - {fileID: 114074883}
   - {fileID: 452948562}
   m_Father: {fileID: 20201888}
-  m_RootOrder: 11
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &738111223
 BoxCollider:
@@ -9491,7 +9563,7 @@ Transform:
   - {fileID: 1507966084}
   - {fileID: 1064913400}
   m_Father: {fileID: 20201888}
-  m_RootOrder: 10
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &748843195
 BoxCollider:
@@ -10762,7 +10834,7 @@ CanvasRenderer:
 Transform:
   m_PrefabParentObject: {fileID: 4288470841939446, guid: c12440300e229d94f93d1622d780d9bd,
     type: 2}
-  m_PrefabInternal: {fileID: 1534519804}
+  m_PrefabInternal: {fileID: 333175996}
 --- !u!1 &852578072
 GameObject:
   m_ObjectHideFlags: 0
@@ -10862,6 +10934,7 @@ GameObject:
   m_Component:
   - component: {fileID: 855725788}
   - component: {fileID: 855725789}
+  - component: {fileID: 855725791}
   - component: {fileID: 855725790}
   m_Layer: 0
   m_Name: Plant
@@ -10877,14 +10950,14 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 855725787}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.81, y: 5.62, z: 4.13}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 5.81, y: 6.811, z: 4.13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 135918486}
   - {fileID: 1499276772}
-  m_Father: {fileID: 20201888}
-  m_RootOrder: 8
+  m_Father: {fileID: 907949346}
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &855725789
 BoxCollider:
@@ -10907,26 +10980,73 @@ MonoBehaviour:
   m_GameObject: {fileID: 855725787}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2697a4b3bbd36b149ad6876408cad0ba, type: 3}
+  m_Script: {fileID: 11500000, guid: e8aeee99972ae934097a020e274fce87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DetectViaRaycast: 1
-  Evt_OnInteract:
+  PieceDoesNotFitInPuzzle:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1499276773}
-        m_MethodName: AdvanceDialogue
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+      m_Calls: []
+    m_TypeName: PieceDoesNotFitInPuzzleEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  PieceDoesNotFitInSlot:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: PieceDoesNotFitInSlotEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  PlacePieceInSlot:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: PlacePieceInSlotEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  ReplacePieceInSlot:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: ReplacePieceInSlotEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  PuzzleSolved:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: PuzzleSolvedEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  TakePiece:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: TakePieceEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  PuzzleFailedWithReturn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: PuzzleFailedWithReturnEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  PuzzleFailed:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: PuzzleFailedEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  PuzzleClicked:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: PuzzleClickedEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  CheckPuzzle:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: CheckPuzzleEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+--- !u!114 &855725791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 855725787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5908af874cd775e46bc0743c6cd6d74e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  piece: {fileID: 2128466234}
+  RemoveAfterPickup: 0
+  EventContainer: {fileID: 0}
 --- !u!1 &867618928
 GameObject:
   m_ObjectHideFlags: 0
@@ -11620,7 +11740,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5946ff0d55401bb4abbd653e99e8d42b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PuzzleID: 0
+  PuzzleID: {fileID: 0}
   Name: 
 --- !u!23 &883402376
 MeshRenderer:
@@ -11950,6 +12070,11 @@ Transform:
   - {fileID: 153426359}
   - {fileID: 1957102899}
   - {fileID: 2023864711}
+  - {fileID: 974229798}
+  - {fileID: 2097144729}
+  - {fileID: 1795816160}
+  - {fileID: 1861811441}
+  - {fileID: 855725788}
   m_Father: {fileID: 377664929}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12222,7 +12347,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5946ff0d55401bb4abbd653e99e8d42b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PuzzleID: 0
+  PuzzleID: {fileID: 0}
   Name: Music Piece 3
 --- !u!1 &922926920
 GameObject:
@@ -12255,7 +12380,7 @@ Transform:
   - {fileID: 793088361}
   - {fileID: 1828619309}
   m_Father: {fileID: 20201888}
-  m_RootOrder: 14
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!65 &922926922
 BoxCollider:
@@ -12730,6 +12855,8 @@ GameObject:
   m_Component:
   - component: {fileID: 974229798}
   - component: {fileID: 974229799}
+  - component: {fileID: 974229802}
+  - component: {fileID: 974229801}
   - component: {fileID: 974229800}
   m_Layer: 0
   m_Name: Desk
@@ -12746,13 +12873,13 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 974229797}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5, y: 0.88, z: 7.03}
+  m_LocalPosition: {x: -5, y: 2.071, z: 7.03}
   m_LocalScale: {x: 2.069889, y: 5.6334023, z: 3.9298499}
   m_Children:
   - {fileID: 1979880706}
   - {fileID: 2058800418}
-  m_Father: {fileID: 20201888}
-  m_RootOrder: 2
+  m_Father: {fileID: 907949346}
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &974229799
 BoxCollider:
@@ -12775,26 +12902,92 @@ MonoBehaviour:
   m_GameObject: {fileID: 974229797}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2697a4b3bbd36b149ad6876408cad0ba, type: 3}
+  m_Script: {fileID: 11500000, guid: e8aeee99972ae934097a020e274fce87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DetectViaRaycast: 1
-  Evt_OnInteract:
+  PieceDoesNotFitInPuzzle:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2058800419}
-        m_MethodName: AdvanceDialogue
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+      m_Calls: []
+    m_TypeName: PieceDoesNotFitInPuzzleEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  PieceDoesNotFitInSlot:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: PieceDoesNotFitInSlotEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  PlacePieceInSlot:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: PlacePieceInSlotEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  ReplacePieceInSlot:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: ReplacePieceInSlotEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  PuzzleSolved:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: PuzzleSolvedEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  TakePiece:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: TakePieceEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  PuzzleFailedWithReturn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: PuzzleFailedWithReturnEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  PuzzleFailed:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: PuzzleFailedEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  PuzzleClicked:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: PuzzleClickedEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  CheckPuzzle:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: CheckPuzzleEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+--- !u!114 &974229801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 974229797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bde341d02948a24ebcb0c3d0cedffad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PuzzleID: {fileID: 0}
+  Inventory: {fileID: 833328810}
+  Rewarded: 0
+  Reward:
+  - {fileID: 1726591356}
+  - {fileID: 389443846}
+  - {fileID: 1403316522}
+  EventContainer: {fileID: 0}
+--- !u!114 &974229802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 974229797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87089f73d8995e14b89885aaa2729a20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Solution:
+  - {fileID: 2128466234}
+  OrderedPuzzle: 0
 --- !u!1 &977011444
 GameObject:
   m_ObjectHideFlags: 0
@@ -13848,7 +14041,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5946ff0d55401bb4abbd653e99e8d42b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PuzzleID: 0
+  PuzzleID: {fileID: 0}
   Name: 
 --- !u!23 &1079442328
 MeshRenderer:
@@ -14218,7 +14411,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5946ff0d55401bb4abbd653e99e8d42b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PuzzleID: 0
+  PuzzleID: {fileID: 0}
   Name: Blue Book 1
 --- !u!23 &1093666358
 MeshRenderer:
@@ -14959,7 +15152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5946ff0d55401bb4abbd653e99e8d42b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PuzzleID: 0
+  PuzzleID: {fileID: 0}
   Name: 
 --- !u!23 &1167781664
 MeshRenderer:
@@ -16121,7 +16314,7 @@ Transform:
   - {fileID: 1314375584}
   - {fileID: 1878217974}
   m_Father: {fileID: 20201888}
-  m_RootOrder: 13
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: -136.31001, z: 0}
 --- !u!65 &1227251225
 BoxCollider:
@@ -17615,7 +17808,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5946ff0d55401bb4abbd653e99e8d42b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PuzzleID: 0
+  PuzzleID: {fileID: 0}
   Name: Cypher 2
 --- !u!1 &1356188612
 GameObject:
@@ -17773,7 +17966,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5946ff0d55401bb4abbd653e99e8d42b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PuzzleID: 0
+  PuzzleID: {fileID: 0}
   Name: Red Book 2
 --- !u!23 &1366575935
 MeshRenderer:
@@ -18430,7 +18623,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5946ff0d55401bb4abbd653e99e8d42b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PuzzleID: 0
+  PuzzleID: {fileID: 0}
   Name: Red Book 1
 --- !u!23 &1403316523
 MeshRenderer:
@@ -19060,7 +19253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5946ff0d55401bb4abbd653e99e8d42b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PuzzleID: 0
+  PuzzleID: {fileID: 0}
   Name: 
 --- !u!23 &1456931063
 MeshRenderer:
@@ -19158,7 +19351,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5946ff0d55401bb4abbd653e99e8d42b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PuzzleID: 0
+  PuzzleID: {fileID: 0}
   Name: 
 --- !u!23 &1459712193
 MeshRenderer:
@@ -20316,78 +20509,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1533901261}
   m_Mesh: {fileID: 4300000, guid: b3fb804eeaca8c3429bcf2383696146e, type: 3}
---- !u!1001 &1534519804
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 907949346}
-    m_Modifications:
-    - target: {fileID: 114095364005538284, guid: c12440300e229d94f93d1622d780d9bd,
-        type: 2}
-      propertyPath: Reward.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4288470841939446, guid: c12440300e229d94f93d1622d780d9bd, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 12.483
-      objectReference: {fileID: 0}
-    - target: {fileID: 4288470841939446, guid: c12440300e229d94f93d1622d780d9bd, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 4.039
-      objectReference: {fileID: 0}
-    - target: {fileID: 4288470841939446, guid: c12440300e229d94f93d1622d780d9bd, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 7.637
-      objectReference: {fileID: 0}
-    - target: {fileID: 4288470841939446, guid: c12440300e229d94f93d1622d780d9bd, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4288470841939446, guid: c12440300e229d94f93d1622d780d9bd, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0.9848172
-      objectReference: {fileID: 0}
-    - target: {fileID: 4288470841939446, guid: c12440300e229d94f93d1622d780d9bd, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4288470841939446, guid: c12440300e229d94f93d1622d780d9bd, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0.17359444
-      objectReference: {fileID: 0}
-    - target: {fileID: 4288470841939446, guid: c12440300e229d94f93d1622d780d9bd, type: 2}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114095364005538284, guid: c12440300e229d94f93d1622d780d9bd,
-        type: 2}
-      propertyPath: Solution.Array.data[0]
-      value: 
-      objectReference: {fileID: 1726591356}
-    - target: {fileID: 114095364005538284, guid: c12440300e229d94f93d1622d780d9bd,
-        type: 2}
-      propertyPath: Solution.Array.data[1]
-      value: 
-      objectReference: {fileID: 1540058392}
-    - target: {fileID: 114095364005538284, guid: c12440300e229d94f93d1622d780d9bd,
-        type: 2}
-      propertyPath: Solution.Array.data[2]
-      value: 
-      objectReference: {fileID: 922690303}
-    - target: {fileID: 114095364005538284, guid: c12440300e229d94f93d1622d780d9bd,
-        type: 2}
-      propertyPath: Reward.Array.data[0]
-      value: 
-      objectReference: {fileID: 153426360}
-    - target: {fileID: 114095364005538284, guid: c12440300e229d94f93d1622d780d9bd,
-        type: 2}
-      propertyPath: Inventory
-      value: 
-      objectReference: {fileID: 833328810}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: c12440300e229d94f93d1622d780d9bd, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &1540058390
 GameObject:
   m_ObjectHideFlags: 0
@@ -20428,7 +20549,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5946ff0d55401bb4abbd653e99e8d42b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PuzzleID: 0
+  PuzzleID: {fileID: 0}
   Name: Music Piece 2
 --- !u!1 &1540073353
 GameObject:
@@ -22680,7 +22801,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5946ff0d55401bb4abbd653e99e8d42b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PuzzleID: 0
+  PuzzleID: {fileID: 0}
   Name: Music piece 1
 --- !u!1 &1728178532
 GameObject:
@@ -23628,7 +23749,7 @@ Transform:
   - {fileID: 1813154306}
   - {fileID: 339890693}
   m_Father: {fileID: 20201888}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1782986743
 BoxCollider:
@@ -23795,8 +23916,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1795816160}
-  - component: {fileID: 1795816162}
   - component: {fileID: 1795816161}
+  - component: {fileID: 1795816163}
+  - component: {fileID: 1795816162}
   m_Layer: 0
   m_Name: GreenBook
   m_TagString: Untagged
@@ -23810,14 +23932,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1795816159}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.191, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1412948510}
   - {fileID: 1356188613}
-  m_Father: {fileID: 20201888}
-  m_RootOrder: 15
+  m_Father: {fileID: 907949346}
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1795816161
 BoxCollider:
@@ -23839,26 +23961,73 @@ MonoBehaviour:
   m_GameObject: {fileID: 1795816159}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2697a4b3bbd36b149ad6876408cad0ba, type: 3}
+  m_Script: {fileID: 11500000, guid: e8aeee99972ae934097a020e274fce87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DetectViaRaycast: 1
-  Evt_OnInteract:
+  PieceDoesNotFitInPuzzle:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1412948511}
-        m_MethodName: AdvanceDialogue
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+      m_Calls: []
+    m_TypeName: PieceDoesNotFitInPuzzleEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  PieceDoesNotFitInSlot:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: PieceDoesNotFitInSlotEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  PlacePieceInSlot:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: PlacePieceInSlotEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  ReplacePieceInSlot:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: ReplacePieceInSlotEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  PuzzleSolved:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: PuzzleSolvedEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  TakePiece:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: TakePieceEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  PuzzleFailedWithReturn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: PuzzleFailedWithReturnEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  PuzzleFailed:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: PuzzleFailedEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  PuzzleClicked:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: PuzzleClickedEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  CheckPuzzle:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: CheckPuzzleEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+--- !u!114 &1795816163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1795816159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5908af874cd775e46bc0743c6cd6d74e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  piece: {fileID: 404195636}
+  RemoveAfterPickup: 1
+  EventContainer: {fileID: 0}
 --- !u!4 &1799648116
 Transform:
   m_ObjectHideFlags: 0
@@ -24371,7 +24540,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5946ff0d55401bb4abbd653e99e8d42b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PuzzleID: 0
+  PuzzleID: {fileID: 0}
   Name: 
 --- !u!23 &1831166759
 MeshRenderer:
@@ -24498,6 +24667,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1861811441}
   - component: {fileID: 1861811442}
+  - component: {fileID: 1861811444}
   - component: {fileID: 1861811443}
   m_Layer: 0
   m_Name: Bed
@@ -24514,13 +24684,13 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1861811440}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -27.67, y: 15.11, z: 11.4}
+  m_LocalPosition: {x: -27.67, y: 16.300999, z: 11.4}
   m_LocalScale: {x: 1.6539199, y: 1, z: 3.9298499}
   m_Children:
   - {fileID: 218405239}
   - {fileID: 1331733027}
-  m_Father: {fileID: 20201888}
-  m_RootOrder: 12
+  m_Father: {fileID: 907949346}
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1861811442
 BoxCollider:
@@ -24543,11 +24713,73 @@ MonoBehaviour:
   m_GameObject: {fileID: 1861811440}
   m_Enabled: 1
   m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8aeee99972ae934097a020e274fce87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PieceDoesNotFitInPuzzle:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: PieceDoesNotFitInPuzzleEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  PieceDoesNotFitInSlot:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: PieceDoesNotFitInSlotEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  PlacePieceInSlot:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: PlacePieceInSlotEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  ReplacePieceInSlot:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: ReplacePieceInSlotEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  PuzzleSolved:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: PuzzleSolvedEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  TakePiece:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: TakePieceEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  PuzzleFailedWithReturn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: PuzzleFailedWithReturnEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  PuzzleFailed:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: PuzzleFailedEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  PuzzleClicked:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: PuzzleClickedEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  CheckPuzzle:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: CheckPuzzleEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+--- !u!114 &1861811444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1861811440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5908af874cd775e46bc0743c6cd6d74e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   piece: {fileID: 629471938}
-  RemoveAfterPickup: 0
+  RemoveAfterPickup: 1
+  EventContainer: {fileID: 0}
 --- !u!1 &1878217973
 GameObject:
   m_ObjectHideFlags: 0
@@ -25142,7 +25374,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5946ff0d55401bb4abbd653e99e8d42b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PuzzleID: 0
+  PuzzleID: {fileID: 0}
   Name: 
 --- !u!23 &1903492594
 MeshRenderer:
@@ -25605,6 +25837,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1957102899}
+  - component: {fileID: 1957102902}
+  - component: {fileID: 1957102901}
   - component: {fileID: 1957102900}
   m_Layer: 0
   m_Name: CombinationPuzzle
@@ -25620,7 +25854,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1957102898}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -20.228, y: 11.494, z: 4.08}
+  m_LocalPosition: {x: -20.228, y: 12.795, z: 4.08}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 815967289}
@@ -25639,6 +25873,86 @@ MonoBehaviour:
   m_GameObject: {fileID: 1957102898}
   m_Enabled: 1
   m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bde341d02948a24ebcb0c3d0cedffad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PuzzleID: {fileID: 0}
+  Inventory: {fileID: 833328810}
+  Rewarded: 0
+  Reward:
+  - {fileID: 1366575934}
+  - {fileID: 1540058392}
+  - {fileID: 1352507487}
+  EventContainer: {fileID: 0}
+--- !u!114 &1957102901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1957102898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8aeee99972ae934097a020e274fce87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PieceDoesNotFitInPuzzle:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: PieceDoesNotFitInPuzzleEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  PieceDoesNotFitInSlot:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: PieceDoesNotFitInSlotEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  PlacePieceInSlot:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: PlacePieceInSlotEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  ReplacePieceInSlot:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: ReplacePieceInSlotEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  PuzzleSolved:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: PuzzleSolvedEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  TakePiece:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: TakePieceEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  PuzzleFailedWithReturn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: PuzzleFailedWithReturnEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  PuzzleFailed:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: PuzzleFailedEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  PuzzleClicked:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: PuzzleClickedEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  CheckPuzzle:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: CheckPuzzleEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+--- !u!114 &1957102902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1957102898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 698a834fd8cab234497d1f077caa9c91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -25649,17 +25963,6 @@ MonoBehaviour:
     PuzzleCycler: {fileID: 1753195569}
   - PuzzlePiece: {fileID: 1167781663}
     PuzzleCycler: {fileID: 1386612359}
-  PuzzleID: 0
-  Inventory: {fileID: 833328810}
-  SolvedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  Reward:
-  - {fileID: 1366575934}
-  - {fileID: 215752886}
-  - {fileID: 922690303}
 --- !u!1 &1961570026
 GameObject:
   m_ObjectHideFlags: 0
@@ -26443,6 +26746,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 2011083896}
+  - component: {fileID: 2011083899}
+  - component: {fileID: 2011083898}
   - component: {fileID: 2011083897}
   m_Layer: 0
   m_Name: BookPuzzle
@@ -26477,6 +26782,85 @@ MonoBehaviour:
   m_GameObject: {fileID: 2011083895}
   m_Enabled: 1
   m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8aeee99972ae934097a020e274fce87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PieceDoesNotFitInPuzzle:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: PieceDoesNotFitInPuzzleEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  PieceDoesNotFitInSlot:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: PieceDoesNotFitInSlotEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  PlacePieceInSlot:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: PlacePieceInSlotEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  ReplacePieceInSlot:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: ReplacePieceInSlotEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  PuzzleSolved:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: PuzzleSolvedEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  TakePiece:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: TakePieceEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  PuzzleFailedWithReturn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: PuzzleFailedWithReturnEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  PuzzleFailed:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: PuzzleFailedEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  PuzzleClicked:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: PuzzleClickedEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  CheckPuzzle:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: CheckPuzzleEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+--- !u!114 &2011083898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2011083895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bde341d02948a24ebcb0c3d0cedffad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PuzzleID: {fileID: 0}
+  Inventory: {fileID: 833328810}
+  Rewarded: 0
+  Reward:
+  - {fileID: 922690303}
+  - {fileID: 215752886}
+  EventContainer: {fileID: 0}
+--- !u!114 &2011083899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2011083895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c7597adc95a38474187213cd3d476bb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -26491,17 +26875,6 @@ MonoBehaviour:
     PuzzleSlot: {fileID: 448704914}
   - PuzzlePiece: {fileID: 629471938}
     PuzzleSlot: {fileID: 197246498}
-  PuzzleID: 0
-  Inventory: {fileID: 833328810}
-  Rewarded: 0
-  SolvedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  Reward:
-  - {fileID: 1540058392}
-  - {fileID: 1352507487}
 --- !u!1 &2018134520
 GameObject:
   m_ObjectHideFlags: 0
@@ -26637,6 +27010,7 @@ GameObject:
   - component: {fileID: 2023864715}
   - component: {fileID: 2023864714}
   - component: {fileID: 2023864713}
+  - component: {fileID: 2023864716}
   - component: {fileID: 2023864712}
   m_Layer: 0
   m_Name: BookContainerBlue1
@@ -26666,11 +27040,59 @@ MonoBehaviour:
   m_GameObject: {fileID: 2023864710}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5908af874cd775e46bc0743c6cd6d74e, type: 3}
+  m_Script: {fileID: 11500000, guid: e8aeee99972ae934097a020e274fce87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  piece: {fileID: 1093666357}
-  RemoveAfterPickup: 1
+  PieceDoesNotFitInPuzzle:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: PieceDoesNotFitInPuzzleEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  PieceDoesNotFitInSlot:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: PieceDoesNotFitInSlotEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  PlacePieceInSlot:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: PlacePieceInSlotEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  ReplacePieceInSlot:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: ReplacePieceInSlotEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  PuzzleSolved:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: PuzzleSolvedEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  TakePiece:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: TakePieceEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  PuzzleFailedWithReturn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: PuzzleFailedWithReturnEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  PuzzleFailed:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: PuzzleFailedEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  PuzzleClicked:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: PuzzleClickedEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  CheckPuzzle:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: CheckPuzzleEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!23 &2023864713
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -26724,6 +27146,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2023864710}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2023864716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2023864710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5908af874cd775e46bc0743c6cd6d74e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  piece: {fileID: 1093666357}
+  RemoveAfterPickup: 1
+  EventContainer: {fileID: 0}
 --- !u!1 &2024091917
 GameObject:
   m_ObjectHideFlags: 0
@@ -26856,7 +27292,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5946ff0d55401bb4abbd653e99e8d42b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PuzzleID: 0
+  PuzzleID: {fileID: 0}
   Name: 
 --- !u!23 &2028928717
 MeshRenderer:
@@ -27630,6 +28066,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2097144729}
   - component: {fileID: 2097144731}
+  - component: {fileID: 2097144733}
+  - component: {fileID: 2097144732}
   - component: {fileID: 2097144730}
   m_Layer: 0
   m_Name: Letter
@@ -27645,15 +28083,15 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2097144728}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.191, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 270344106}
   - {fileID: 2110645678}
   - {fileID: 82215295}
-  m_Father: {fileID: 20201888}
-  m_RootOrder: 6
+  m_Father: {fileID: 907949346}
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2097144730
 MonoBehaviour:
@@ -27666,31 +28104,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bde341d02948a24ebcb0c3d0cedffad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PuzzleID: 0
-  Solution:
-  - {fileID: 389443846}
-  - {fileID: 1352507487}
-  - {fileID: 215752886}
-  - {fileID: 153426360}
-  OrderedPuzzle: 0
-  Inventory: {fileID: 833328810}
-  SolvedEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 433199337}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+  PuzzleID: {fileID: 0}
+  Inventory: {fileID: 0}
+  Rewarded: 0
   Reward: []
+  EventContainer: {fileID: 0}
 --- !u!65 &2097144731
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27704,6 +28122,84 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.0967816, y: 0.25872993, z: 1.6647501}
   m_Center: {x: -0.49090797, y: 2.1941795, z: 5.963203}
+--- !u!114 &2097144732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2097144728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8aeee99972ae934097a020e274fce87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PieceDoesNotFitInPuzzle:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: PieceDoesNotFitInPuzzleEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  PieceDoesNotFitInSlot:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: PieceDoesNotFitInSlotEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  PlacePieceInSlot:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: PlacePieceInSlotEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  ReplacePieceInSlot:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: ReplacePieceInSlotEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  PuzzleSolved:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: PuzzleSolvedEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  TakePiece:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: TakePieceEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  PuzzleFailedWithReturn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: PuzzleFailedWithReturnEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  PuzzleFailed:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: PuzzleFailedEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  PuzzleClicked:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: PuzzleClickedEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  CheckPuzzle:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: CheckPuzzleEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+--- !u!114 &2097144733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2097144728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87089f73d8995e14b89885aaa2729a20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Solution:
+  - {fileID: 389443846}
+  - {fileID: 1352507487}
+  - {fileID: 215752886}
+  - {fileID: 153426360}
+  OrderedPuzzle: 0
 --- !u!1 &2110645677
 GameObject:
   m_ObjectHideFlags: 0
@@ -27888,7 +28384,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5946ff0d55401bb4abbd653e99e8d42b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PuzzleID: 0
+  PuzzleID: {fileID: 0}
   Name: Desk Key
 --- !u!1 &2129751645
 GameObject:
@@ -28161,7 +28657,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1957102900}
+      - m_Target: {fileID: 1957102902}
         m_MethodName: CheckSolution
         m_Mode: 1
         m_Arguments:

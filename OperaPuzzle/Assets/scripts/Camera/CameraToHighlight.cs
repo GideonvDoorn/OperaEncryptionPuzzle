@@ -28,7 +28,7 @@ public class CameraToHighlight : MonoBehaviour
             
             if (!hitting && cameraPos != null)
             {
-                Debug.Log("hit room");
+                //Debug.Log("hit room");
                 hitting = true;
                 cameraPos.SetHighlight(true);
                 highlighted = cameraPos;
@@ -37,7 +37,7 @@ public class CameraToHighlight : MonoBehaviour
             {
                 hitting = false;
                 highlighted.SetHighlight(false);
-                Debug.Log("!hit room");
+                //Debug.Log("!hit room");
             }
         }
     }

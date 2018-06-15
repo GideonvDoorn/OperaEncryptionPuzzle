@@ -38,6 +38,7 @@ public class PuzzleSlot : MonoBehaviour {
             if (currentPiece != null)
             {
                 inventory.AddToInventory(currentPiece);
+                puzzle.TakePiece(currentPiece);
                 currentPiece = null;
             }
 
@@ -46,7 +47,12 @@ public class PuzzleSlot : MonoBehaviour {
                 if (puzzle.PuzzleID == inventory.CurrentPuzzlePiece.PuzzleID)
                 {
                     currentPiece = inventory.TakeCurrentItem();
+                    puzzle.PlacePieceInSlot(currentPiece);
                     currentPiece.MovePiece(this.transform, true, false);
+                }
+                else
+                {
+                    puzzle.PieceDoesNotFitInSlot(this);
                 }
             }
 

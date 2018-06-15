@@ -8,31 +8,16 @@ public class CycledPuzzle : MonoBehaviour {
 
     public CycleSolutionPair[] Solution;
 
-    public int PuzzleID; //
-
-    public Inventory Inventory; //
-    private bool rewarded = false; //
-
-    public UnityEvent SolvedEvent = new UnityEvent();
-
-    public PuzzlePiece[] Reward; //
-
+    public Puzzle PuzzleID
+    {
+        get { return basePuzzle; }
+    }
     private Puzzle basePuzzle;
 
     public void Awake()
     {
         basePuzzle = GetComponent<Puzzle>();
     }
-
-    // Use this for initialization
-    public void Start () {
-        PuzzleID = Puzzle.nextID++;
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
     public void CheckSolution()
     {
@@ -48,28 +33,14 @@ public class CycledPuzzle : MonoBehaviour {
 
         if (correct)
         {
-            DispenseReward();
-            Debug.Log("Yay");
+            basePuzzle.DispenseReward();
         }
         else
         {
-            Debug.Log("Nay");
-        }
-        //return correct;
-    }
-
-    private void DispenseReward() //
-    {
-        if (!rewarded)
-        {
-            if (Inventory != null)
-            {
-                Inventory.AddToInventory(Reward);
-            }
-            rewarded = true;
-            SolvedEvent.Invoke();
+            basePuzzle.PuzzleFailed();
         }
     }
+    
 }
 
 [System.Serializable]

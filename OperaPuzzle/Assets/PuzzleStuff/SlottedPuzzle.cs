@@ -9,14 +9,12 @@ public class SlottedPuzzle : MonoBehaviour
 
     public PuzzleSolutionPair[] Solution;
 
-    public int PuzzleID; //
+    public Puzzle PuzzleID
+    {
+        get { return basePuzzle; }
+    }
 
-    public Inventory Inventory; //
-    public bool Rewarded = false; //
-
-    public UnityEvent SolvedEvent = new UnityEvent();
-
-    public PuzzlePiece[] Reward; //
+    public bool Rewarded { get { return basePuzzle.Rewarded; } }
 
     private Puzzle basePuzzle;
 
@@ -27,13 +25,11 @@ public class SlottedPuzzle : MonoBehaviour
 
     // Use this for initialization
     public void Start () {
-
-        PuzzleID = Puzzle.nextID++;
         
         foreach (PuzzleSolutionPair item in Solution)
         {
             item.PuzzleSlot.Initialize(this, item.PuzzlePiece);
-            item.PuzzlePiece.PuzzleID = PuzzleID;
+            item.PuzzlePiece.PuzzleID = basePuzzle;
         }
     }
 	
@@ -42,9 +38,8 @@ public class SlottedPuzzle : MonoBehaviour
 
 	}
 
-    public bool CheckSolution()
+    public void CheckSolution()
     {
-        Debug.Log("Checking");
         bool correct = true;
         foreach (PuzzleSolutionPair item in Solution)
         {
@@ -58,32 +53,35 @@ public class SlottedPuzzle : MonoBehaviour
         {
             SolvePuzzle();
         }
-
-        return correct;
+        else
+        {
+            basePuzzle.PuzzleFailed();
+        }
 
     }
 
     public void SolvePuzzle()
     {
-        
-        DispenseReward();
+        basePuzzle.DispenseReward();
     }
 
-    private void DispenseReward()
+    public void PieceDoesNotFitInSlot(PuzzleSlot slot)
     {
-        if (!Rewarded)
-        {
-            if (Inventory != null)
-            {
-                Debug.Log("Solved");
-                Inventory.AddToInventory(Reward);
-            }
-            Rewarded = true;
-            SolvedEvent.Invoke();
-        }
+        basePuzzle.PieceDoesNotFitInSlot(slot);
+    }
+
+    public void TakePiece(PuzzlePiece piece)
+    {
+        basePuzzle.TakePiece(piece);
+    }
+
+    public void PlacePieceInSlot(PuzzlePiece piece)
+    {
+        basePuzzle.PlacePieceInSlot(piece);
     }
 
 }
+
 
 [System.Serializable]
 public class PuzzleSolutionPair

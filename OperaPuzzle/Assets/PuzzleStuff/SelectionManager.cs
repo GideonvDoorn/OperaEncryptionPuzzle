@@ -35,7 +35,7 @@ public class SelectionManager : MonoBehaviour {
                 {
 
                     PuzzleSlot puzzleSlot = hit.transform.gameObject.GetComponent<PuzzleSlot>();
-                    Puzzle puzzle = hit.transform.gameObject.GetComponent<Puzzle>();
+                    CollectionPuzzle collectionPuzzle = hit.transform.gameObject.GetComponent<CollectionPuzzle>();
                     PuzzlePieceCycler cycler = hit.transform.gameObject.GetComponent<PuzzlePieceCycler>();
                     Container container = hit.transform.gameObject.GetComponent<Container>();
                     PuzzlePiece piece = hit.transform.gameObject.GetComponent<PuzzlePiece>();
@@ -44,9 +44,9 @@ public class SelectionManager : MonoBehaviour {
                     {
                         puzzleSlot.UsePuzzleSlot(inventory);
                     }
-                    else if (puzzle != null)
+                    else if (collectionPuzzle != null)
                     {
-                        puzzle.PutPuzzlePiece(inventory);
+                        collectionPuzzle.PutPuzzlePiece(inventory);
                     }
                     else if(cycler != null)
                     {

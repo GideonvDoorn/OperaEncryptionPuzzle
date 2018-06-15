@@ -21,61 +21,100 @@ public class PuzzleEvents : MonoBehaviour {
 
     public PuzzleClickedEvent PuzzleClicked = new PuzzleClickedEvent();
 
+    public CheckPuzzleEvent CheckPuzzle = new CheckPuzzleEvent();
+
+    public void Awake()
+    {
+        //PieceDoesNotFitInPuzzle = new PieceDoesNotFitInPuzzleEvent();
+        //PieceDoesNotFitInSlot = new PieceDoesNotFitInSlotEvent();
+        //
+        //PlacePieceInSlot = new PlacePieceInSlotEvent();
+        //ReplacePieceInSlot = new ReplacePieceInSlotEvent();
+        //
+        //PuzzleSolved = new PuzzleSolvedEvent();
+        //
+        //TakePiece = new TakePieceEvent();
+        //
+        //PuzzleFailedWithReturn = new PuzzleFailedWithReturnEvent();
+        //
+        //PuzzleFailed = new PuzzleFailedEvent();
+        //
+        //PuzzleClicked = new PuzzleClickedEvent();
+        //
+        //CheckPuzzle = new CheckPuzzleEvent();
+    }
+
 }
 
+[System.Serializable]
 public class PieceDoesNotFitInPuzzleEvent : UnityEvent<Puzzle>
 {
 
 }
 
+[System.Serializable]
 public class PieceDoesNotFitInSlotEvent : UnityEvent<PuzzleSlot>
 {
 
 }
 
+[System.Serializable]
 public class PlacePieceInSlotEvent : UnityEvent<PuzzlePiece>
 {
 
 }
 
+[System.Serializable]
 public class ReplacePieceInSlotEvent : UnityEvent<PuzzlePiece, PuzzlePiece>
 {
 
 }
 
+[System.Serializable]
 public class PuzzleSolvedEvent : UnityEvent<Puzzle, PuzzleCollection>
 {
 
 }
 
+[System.Serializable]
 public class TakePieceEvent : UnityEvent<PuzzlePiece>
 {
 
 }
 
+[System.Serializable]
 public class PuzzleFailedWithReturnEvent : UnityEvent<Puzzle, PuzzleCollection>
 {
 
 }
 
+[System.Serializable]
 public class PuzzleFailedEvent : UnityEvent<Puzzle>
 {
 
 }
 
+[System.Serializable]
 public class PuzzleClickedEvent : UnityEvent
 {
 
 }
 
+[System.Serializable]
+public class CheckPuzzleEvent : UnityEvent
+{
+
+}
+
+[System.Serializable]
 public class PuzzleCollection
 {
-    private List<PuzzlePiece> pieces;
+    private PuzzlePiece[] pieces;
 
-    public PuzzleCollection(List<PuzzlePiece> pieces)
+    public PuzzleCollection(PuzzlePiece[] pieces)
     {
         this.pieces = pieces;
     }
 
-    public List<PuzzlePiece> Pieces{ get {return pieces;}}
+    public PuzzlePiece[] Pieces{ get {return pieces;}}
 }

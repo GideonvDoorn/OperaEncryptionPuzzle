@@ -37,7 +37,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4288470841939446}
   - component: {fileID: 65932430311168990}
-  - component: {fileID: 114095364005538284}
+  - component: {fileID: 114868854102622020}
+  - component: {fileID: 114435169010274446}
+  - component: {fileID: 114613196638679888}
   m_Layer: 0
   m_Name: MusicBox
   m_TagString: Untagged
@@ -3611,7 +3613,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4, y: 3, z: 4}
   m_Center: {x: -0.5, y: 1, z: 0.5}
---- !u!114 &114095364005538284
+--- !u!114 &114435169010274446
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -3623,15 +3625,81 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PuzzleID: 0
-  Solution:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  OrderedPuzzle: 1
   Inventory: {fileID: 0}
-  SolvedEvent:
+  Reward:
+  - {fileID: 0}
+  EventContainer: {fileID: 0}
+--- !u!114 &114613196638679888
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1040701296377250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8aeee99972ae934097a020e274fce87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PieceDoesNotFitInPuzzle:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  Reward: []
+    m_TypeName: PieceDoesNotFitInPuzzleEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  PieceDoesNotFitInSlot:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: PieceDoesNotFitInSlotEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  PlacePieceInSlot:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: PlacePieceInSlotEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  ReplacePieceInSlot:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: ReplacePieceInSlotEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  PuzzleSolved:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: PuzzleSolvedEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  TakePiece:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: TakePieceEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  PuzzleFailedWithReturn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: PuzzleFailedWithReturnEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  PuzzleFailed:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: PuzzleFailedEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  PuzzleClicked:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: PuzzleClickedEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  CheckPuzzle:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: CheckPuzzleEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+--- !u!114 &114868854102622020
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1040701296377250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87089f73d8995e14b89885aaa2729a20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Solution: []
+  OrderedPuzzle: 0

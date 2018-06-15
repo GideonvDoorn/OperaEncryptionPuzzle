@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PuzzlePiece : MonoBehaviour {
 
-    public int PuzzleID;
+    public Puzzle PuzzleID;
 
     new private Collider collider;
 

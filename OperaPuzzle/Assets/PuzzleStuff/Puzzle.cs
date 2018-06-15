@@ -6,105 +6,94 @@ using UnityEngine.Events;
 [RequireComponent(typeof(PuzzleEvents))]
 public class Puzzle : MonoBehaviour {
 
-    public int PuzzleID;
-
-    public PuzzlePiece[] Solution;
-
-    private List<PuzzlePiece> pieces = new List<PuzzlePiece>();
-
-    public bool OrderedPuzzle = false;
+    public Puzzle PuzzleID;
 
     public Inventory Inventory;
-    private bool rewarded = false;
-
-    public UnityEvent SolvedEvent = new UnityEvent();
+    public bool Rewarded = false;
 
     public PuzzlePiece[] Reward;
 
+    public PuzzleEvents EventContainer;
+
     [HideInInspector]
-    public static int nextID = 0;
+    private static int nextID = 0;
 
-	// Use this for initialization
-	public virtual void Start () {
-        PuzzleID = nextID++;
-        foreach (PuzzlePiece p in Solution)
-        {
-            p.PuzzleID = PuzzleID;
-        }
-
-        
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
-    public void PutPuzzlePiece(Inventory inventory)
+    public void Awake()
     {
-        if (inventory.CurrentPuzzlePiece != null)
-        {
-            pieces.Add(inventory.TakeCurrentItem());
-            //inventory.CurrentPuzzlePiece.MovePiece(this.transform, false, false);
-        }
+        EventContainer = GetComponent<PuzzleEvents>();
+    }
 
-        if (pieces.Count == Solution.Length)
-        {
-            if (CheckSolution())
-            {
-                DispenseReward();
-            }
-            else
-            {
-                foreach (PuzzlePiece piece in pieces)
-                {
-                    inventory.AddToInventory(piece);
-                }
+    // Use this for initialization
+    public void Start() {
+        PuzzleID = this;
+    }
 
-                pieces.Clear();
-            }
-        }        
+    // Update is called once per frame
+    void Update() {
 
     }
 
-    public virtual bool CheckSolution()
+    public void DispenseReward()
     {
-        bool correct = true;
-
-        if (OrderedPuzzle)
-        {
-            for (int i = 0; i < Solution.Length; i++)
-            {
-                if (Solution[i] != pieces[i])
-                {
-                    correct = false;
-                }
-            }
-        }
-        else
-        {
-            foreach (PuzzlePiece piece in Solution)
-            {
-                if (!pieces.Contains(piece))
-                {
-                    correct = false;
-                }
-            }
-        }
-
-        return correct;
-    }
-
-    private void DispenseReward()
-    {
-        if (!rewarded)
+        if (!Rewarded)
         {
             if (Inventory != null)
             {
+                PuzzleSolved();
                 Inventory.AddToInventory(Reward);
             }
-            rewarded = true;
-            SolvedEvent.Invoke();
+            Rewarded = true;
         }
     }
+
+    public void PieceDoesNotFitInPuzzle()
+    {
+        EventContainer.PieceDoesNotFitInPuzzle.Invoke(this);
+    }
+
+    public void PieceDoesNotFitInSlot(PuzzleSlot slot)
+    {
+        EventContainer.PieceDoesNotFitInSlot.Invoke(slot);
+    }
+
+    public void PlacePieceInSlot(PuzzlePiece piece)
+    {
+        EventContainer.PlacePieceInSlot.Invoke(piece);
+    }
+
+    public void ReplacePieceInSlot(PuzzlePiece newPiece, PuzzlePiece oldPiece)
+    {
+        EventContainer.ReplacePieceInSlot.Invoke(newPiece, oldPiece);
+    }
+
+    public void PuzzleSolved()
+    {
+        EventContainer.PuzzleSolved.Invoke(this, new PuzzleCollection(Reward));
+    }
+
+    public void TakePiece(PuzzlePiece piece)
+    {
+        EventContainer.TakePiece.Invoke(piece);
+    }
+
+    public void PuzzleFailedWithReturn(List<PuzzlePiece> pieces)
+    {
+        EventContainer.PuzzleFailedWithReturn.Invoke(this, new PuzzleCollection(pieces.ToArray()));
+    }
+
+    public void PuzzleFailed()
+    {
+        EventContainer.PuzzleFailed.Invoke(this);
+    }
+
+    public void PuzzleClicked()
+    {
+        EventContainer.PuzzleClicked.Invoke();
+    }
+
+    public void CheckPuzzle()
+    {
+        EventContainer.CheckPuzzle.Invoke();
+    }
+
 }
